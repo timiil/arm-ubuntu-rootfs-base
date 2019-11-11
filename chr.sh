@@ -1,2 +1,2 @@
-# bin/sh
+#!/bin/sh
 chroot /mnt/ /install.sh
