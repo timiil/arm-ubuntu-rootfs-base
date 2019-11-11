@@ -7,7 +7,9 @@ RUN  apt-get update -y && apt-get upgrade -y && apt-get install -y qemu qemu-use
      wget -c http://cdimage.ubuntu.com/ubuntu-base/releases/16.04.1/release/ubuntu-base-16.04.1-base-arm64.tar.gz && \
      tar -xzvf ubuntu-base-16.04.1-base-arm64.tar.gz -C /mnt/ && \
      cp -a /usr/bin/qemu-aarch64-static /mnt/usr/bin/ && \
-     chmod +x /mnt/install.sh
-    
-RUN  chroot /mnt/ /install.sh
+     chmod +x /mnt/install.sh && \
+     chmod +x /chr.sh
+ 
+RUN  sh /chr.sh
+#RUN  chroot /mnt/ /install.sh
 
