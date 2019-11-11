@@ -9,5 +9,5 @@ RUN  apt-get update -y && apt-get upgrade -y && apt-get install -y qemu qemu-use
      cp -a /usr/bin/qemu-aarch64-static /mnt/usr/bin/ && \
      chmod +x /mnt/install.sh
     
-#    chroot /mnt/ /install.sh
+RUN  chroot /mnt/ /install.sh
 
